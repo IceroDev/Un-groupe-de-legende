@@ -144,7 +144,7 @@ body {
   margin: auto;
   color: #d2d2d2;
   background-image: url("./bg.gif");
-  background-size: contain;
+  background-size:cover;
 }
 
 .indexImg {
@@ -357,4 +357,13 @@ caption {
   .github-corner .octo-arm {
     animation: octocat-wave 560ms ease-in-out;
   }
+}
+
+.bodyIndex{
+    background-color: #202020;
+    background-image: none;
+}
+.indexclass{
+    text-align: center;
+    margin-top: 250px;
 }
