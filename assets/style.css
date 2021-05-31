@@ -144,7 +144,7 @@ body {
   margin: auto;
   color: #d2d2d2;
   background-image: url("./bg.gif");
-  background-size:cover;
+  background-size:contain;
 }
 
 .indexImg {
