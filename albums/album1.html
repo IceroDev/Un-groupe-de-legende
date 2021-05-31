@@ -1,0 +1,93 @@
+<!-- Nom Prénom -->
+<!-- 6Bo7 -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Album 1</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../assets/style.css" />
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Pattaya&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Metal+Mania&family=Pattaya&display=swap");
+  </style>
+  <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs((slideIndex += n));
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("indexImg");
+      if (n > x.length) {
+        slideIndex = 1;
+      }
+      if (n < 1) {
+        slideIndex = x.length;
+      }
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      x[slideIndex - 1].style.display = "block";
+    }
+  </script>
+  <body>
+    <div id="container">
+      <div class="w3-content w3-display-container">
+        <header>
+          <img
+            src="./assets/banner.png"
+            alt=""
+            class="indexImg"
+            style="display: block"
+          />
+          <img src="./assets/rick.gif" alt="" class="indexImg" />
+        </header>
+      </div>
+      <nav id="menu_gauche">
+        <ol>
+          <li><a href="album1.html" alt="Album 1">Kill 'Em All</a></li>
+          <li><a href="album2.html" alt="Album 2">Ride The Lightning</a></li>
+          <li><a href="album3.html" alt="Album 3">Master of Puppets</a></li>
+          <li><a href="album4.html" alt="Album 4">…And Justice for All</a></li>
+          <li><a href="album5.html" alt="Album 5">Metallica</a></li>
+          <li><a href="album6.html" alt="Album 6">Load</a></li>
+        </ol>
+      </nav>
+      <article>
+        <h1>Kill 'Em All</h1>
+        <figure>
+          <figcaption>Hit The Lights:</figcaption>
+          <audio controls src="../assets/music/Hit The Lights.mp3">
+            <code>audio</code> element.
+          </audio>
+        </figure>
+        <p class="bio">
+          Kill 'Em All est le premier album officiel du groupe de thrash metal
+          Metallica, sorti le 25 juillet 1983. Cet album marque le début d'une
+          des légendes du thrash metal. Plus rapide que ses successeurs, cet
+          album est considéré comme incontournable par les fans. Le tempo de la
+          plupart des chansons de l'album est très rythmé et ultra rapide. La
+          performance vocale de James Hetfield sur cet album étant à l'époque
+          loin de celle du Black Album, beaucoup d'écho a été ajouté sur sa voix
+          encore très jeune.
+        </p>
+        <p>
+          <img
+            src="../assets/metallica-kill-em-all.jpg"
+            alt="cover album"
+            class="imgalbum"
+          />
+        </p>
+      </article>
+      <footer>
+        <p>site réalisé par Jean Staffe mai 2021</p>
+        <p><button class="footerbutton" onclick="plusDivs(1)"></button></p>
+      </footer>
+    </div>
+  </body>
+</html>

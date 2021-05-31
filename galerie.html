@@ -1,0 +1,131 @@
+<!-- Nom Prénom -->
+<!-- 6Bo7 -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>galerie</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Pattaya&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Metal+Mania&family=Pattaya&display=swap");
+  </style>
+  <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs((slideIndex += n));
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("indexImg");
+      if (n > x.length) {
+        slideIndex = 1;
+      }
+      if (n < 1) {
+        slideIndex = x.length;
+      }
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      x[slideIndex - 1].style.display = "block";
+    }
+  </script>
+  <body>
+    <div id="container">
+      <div class="w3-content w3-display-container">
+        <header>
+          <img
+            src="./assets/banner.png"
+            alt=""
+            class="indexImg"
+            style="display: block"
+          />
+          <img src="./assets/rick.gif" alt="" class="indexImg" />
+        </header>
+      </div>
+      <nav id="menu_gauche">
+        <ol>
+          <li><a href="accueil.html" alt="Accueil">Accueil</a></li>
+          <li><a href="bio.html" alt="Biographie">Biographie</a></li>
+          <li><a href="membres.html" alt="Les Membres">Les Membres</a></li>
+          <li>
+            <a href="discographie.html" alt="Discographie">Discographie</a>
+          </li>
+        </ol>
+      </nav>
+      <article>
+        <h1>galerie</h1>
+        <table>
+          <caption>
+            12 images de Metallica
+          </caption>
+          <tr>
+            <td>
+              <img
+                src="./assets/albumPict/51wH830SQGL._SL1000_.jpg"
+                alt=""
+                class="galerie_img"
+              />
+            </td>
+            <td>
+              <img
+                src="./assets/albumPict/7bc2303d4c6c8ebb623370a8049b0f7c-1589875349.jpg"
+                alt=""
+                class="galerie_img"
+              />
+            </td>
+            <td><img src="./assets/albumPict/870x489_metallicaheavymontreal2017-66513.jpg" alt="" class="galerie_img" /></td>
+          </tr>
+          <tr>
+            <td>
+              <img src="./assets/albumPict/belgaimage-151293306-full.jpg" alt="" class="galerie_img" />
+            </td>
+            <td>
+              <img src="./assets/albumPict/images.jpg" alt="" class="galerie_img" />
+            </td>
+            <td>
+              <img src="./assets/albumPict/metallica-2.jpg" alt="" class="galerie_img" />
+            </td>
+          </tr>
+          <tr>
+            <td><img src="./assets/albumPict/metallica-jimmy-hubbard.jpg" alt="" class="galerie_img" /></td>
+            <td><img src="./assets/albumPict/Metallica-Un-nouvel-album-en-preparation.jpg" alt="" class="galerie_img" /></td>
+            <td>
+              <img
+                src="./assets/albumPict/metallica.jpg"
+                alt=""
+                class="galerie_img"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="./assets/albumPict/metallica1986_getty.jpg"
+                alt=""
+                class="galerie_img"
+              />
+            </td>
+            <td>
+              <img
+                src="./assets/albumPict/metallica2013afpok.jpg"
+                alt=""
+                class="galerie_img"
+              />
+            </td>
+            <td><img src="./assets/albumPict/moustique_metallica_ouverture_02.jpg" alt="" class="galerie_img" /></td>
+          </tr>
+        </table>
+      </article>
+      <footer>
+        <p>site réalisé par Jean Staffe mai 2021</p>
+        <p><button class="footerbutton" onclick="plusDivs(1)"></button></p>
+      </footer>
+    </div>
+  </body>
+</html>

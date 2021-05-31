@@ -1,0 +1,97 @@
+<!-- Nom Prénom -->
+<!-- 6Bo7 -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Album 2</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../assets/style.css" />
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Pattaya&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Metal+Mania&family=Pattaya&display=swap");
+  </style>
+  <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs((slideIndex += n));
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("indexImg");
+      if (n > x.length) {
+        slideIndex = 1;
+      }
+      if (n < 1) {
+        slideIndex = x.length;
+      }
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      x[slideIndex - 1].style.display = "block";
+    }
+  </script>
+  <body>
+    <div id="container">
+      <div class="w3-content w3-display-container">
+        <header>
+          <img
+            src="./assets/banner.png"
+            alt=""
+            class="indexImg"
+            style="display: block"
+          />
+          <img src="./assets/rick.gif" alt="" class="indexImg" />
+        </header>
+      </div>
+      <nav id="menu_gauche">
+        <ol>
+          <li><a href="album1.html" alt="Album 1">Kill 'Em All</a></li>
+          <li><a href="album2.html" alt="Album 2">Ride The Lightning</a></li>
+          <li><a href="album3.html" alt="Album 3">Master of Puppets</a></li>
+          <li><a href="album4.html" alt="Album 4">…And Justice for All</a></li>
+          <li><a href="album5.html" alt="Album 5">Metallica</a></li>
+          <li><a href="album6.html" alt="Album 6">Load</a></li>
+        </ol>
+      </nav>
+      <article>
+        <h1>Ride The Lightning</h1>
+        <figure>
+          <figcaption>Ride The Lightning:</figcaption>
+          <audio controls src="../assets/music/Ride The Lightning.mp3">
+            <code>audio</code> element.
+          </audio>
+        </figure>
+        <p class="bio">
+          Ride the Lightning est le deuxième album du groupe de thrash metal
+          américain Metallica. Il est sorti le 27 juillet 1984 chez Megaforce
+          Records et Music for Nations. Il est sorti chez Elektra Records le 19
+          novembre 1984 après que le groupe a signé chez ces derniers en
+          septembre 1984. Ride the Lightning a été vendu à plus de six millions
+          d'exemplaires rien qu'aux États-Unis et a été crédité sept fois disque
+          de platine. Ride the Lightning est considéré comme l'un des classiques
+          du thrash metal et comme une transition musicale entre les débuts de
+          Metallica, Kill 'em All et Master of Puppets, plus mélodique et
+          progressif5. Musicalement, le groupe a élargi son style d'arrangements
+          plus variés et plus complexes et il est, aujourd'hui encore, un disque
+          fort sophistiqué, tant au niveau musical qu'au niveau des paroles.
+        </p>
+        <p>
+          <img
+            src="../assets/Ride_the_Lightning.png"
+            alt="cover album"
+            class="imgalbum"
+          />
+        </p>
+      </article>
+      <footer>
+        <p>site réalisé par Jean Staffe mai 2021</p>
+        <p><button class="footerbutton" onclick="plusDivs(1)"></button></p>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+<!-- Nom Prénom -->
+<!-- 6Bo7 -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Index</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Pattaya&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Metal+Mania&family=Pattaya&display=swap");
+  </style>
+  <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs((slideIndex += n));
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("indexImg");
+      if (n > x.length) {
+        slideIndex = 1;
+      }
+      if (n < 1) {
+        slideIndex = x.length;
+      }
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      x[slideIndex - 1].style.display = "block";
+    }
+  </script>
+  <body>
+    <div>
+      <div class="w3-content w3-display-container">
+        <header>
+          <img
+            src="./assets/banner.png"
+            alt=""
+            class="indexImg"
+            style="display: block"
+          />
+          <img src="./assets/rick.gif" alt="" class="indexImg" />
+        </header>
+      </div>
+
+      <nav id="menu_gauche">
+        <ol>
+          <li><a href="accueil.html" alt="Accueil">Accueil</a></li>
+          <li><a href="galerie.html" alt="Galerie Photo">Galerie Photo</a></li>
+          <li><a href="bio.html" alt="Biographie">Biographie</a></li>
+          <li><a href="membres.html" alt="Les Membres">Les Membres</a></li>
+          <li>
+            <a href="discographie.html" alt="Discographie">Discographie</a>
+          </li>
+        </ol>
+      </nav>
+      <article>
+        <h1>Bienvenue</h1>
+        <p class="PIndex">
+          Staffe Jean<br />
+          6bo7<br />
+          Metallica<br />
+        </p>
+        <p>
+          <img
+            src="./assets/indexasset01-removebg-preview.png"
+            alt="image index Metallica"
+            class="img_index"
+          />
+        </p>
+      </article>
+      <footer>
+        <p>site réalisé par Jean Staffe mai 2021</p>
+        <p><button class="footerbutton" onclick="plusDivs(1)"></button></p>
+      </footer>
+    </div>
+  </body>
+</html>

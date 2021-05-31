@@ -1,0 +1,81 @@
+<!-- Nom Prénom -->
+<!-- 6Bo7 -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>accueil</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Pattaya&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Metal+Mania&family=Pattaya&display=swap");
+  </style>
+  <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs((slideIndex += n));
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("indexImg");
+      if (n > x.length) {
+        slideIndex = 1;
+      }
+      if (n < 1) {
+        slideIndex = x.length;
+      }
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      x[slideIndex - 1].style.display = "block";
+    }
+  </script>
+  <body>
+    <div id="container">
+      <div class="w3-content w3-display-container">
+        <header>
+          <img
+            src="./assets/banner.png"
+            alt=""
+            class="indexImg"
+            style="display: block"
+          />
+          <img src="./assets/rick.gif" alt="" class="indexImg" />
+        </header>
+      </div>
+      <nav id="menu_gauche">
+        <ol>
+          <li><a href="galerie.html" alt="Galerie Photo">Galerie Photo</a></li>
+          <li><a href="bio.html" alt="Biographie">Biographie</a></li>
+          <li><a href="membres.html" alt="Les Membres">Les Membres</a></li>
+          <li>
+            <a href="discographie.html" alt="Discographie">Discographie</a>
+          </li>
+        </ol>
+      </nav>
+      <article>
+        <h1>Accueil</h1>
+        <p class="video_accueil">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube-nocookie.com/embed/HWAMbVjCEJU?controls=0&amp;start=570"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </p>
+      </article>
+      <footer>
+        <p>site réalisé par Jean Staffe mai 2021</p>
+        <p><button class="footerbutton" onclick="plusDivs(1)"></button></p>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,86 @@
+<!-- Nom Prénom -->
+<!-- 6Bo7 -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Discographie</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Pattaya&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Metal+Mania&family=Pattaya&display=swap");
+  </style>
+  <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs((slideIndex += n));
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("indexImg");
+      if (n > x.length) {
+        slideIndex = 1;
+      }
+      if (n < 1) {
+        slideIndex = x.length;
+      }
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      x[slideIndex - 1].style.display = "block";
+    }
+  </script>
+  <body>
+    <div id="container">
+      <div class="w3-content w3-display-container">
+        <header>
+          <img
+            src="./assets/banner.png"
+            alt=""
+            class="indexImg"
+            style="display: block"
+          />
+          <img src="./assets/rick.gif" alt="" class="indexImg" />
+        </header>
+      </div>
+      <nav id="menu_gauche">
+        <ol>
+          <li><a href="album1.html" alt="Album 1">Kill 'Em All</a></li>
+          <li><a href="album2.html" alt="Album 2">Ride The Lightning</a></li>
+          <li><a href="album3.html" alt="Album 3">Master of Puppets</a></li>
+          <li><a href="album4.html" alt="Album 4">…And Justice for All</a></li>
+          <li><a href="album5.html" alt="Album 5">Metallica</a></li>
+          <li><a href="album6.html" alt="Album 6">Load</a></li>
+        </ol>
+      </nav>
+      <article>
+        <h1>Discographie</h1>
+        <p>Discographie de Metallica</p>
+        <ol class="discographie">
+          <li>1983 : Kill 'Em All</li>
+          <li>1984 : Ride the Lightning</li>
+          <li>1986 : Master of Puppets</li>
+          <li>1988 : ...And Justice for All</li>
+          <li>1991 : Metallica</li>
+          <li>1996 : Load</li>
+        </ol>
+        <p>
+          <img
+            src="./assets/f04d7167-bac1-4f6c-b9a1-0fd4b7dfb794.jpg"
+            alt="image index Metallica"
+            class="img_index"
+          />
+        </p>
+      </article>
+      <footer>
+        <p>site réalisé par Jean Staffe mai 2021</p>
+        <p><button class="footerbutton" onclick="plusDivs(1)"></button></p>
+      </footer>
+    </div>
+  </body>
+</html>

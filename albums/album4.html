@@ -1,0 +1,104 @@
+<!-- Nom Prénom -->
+<!-- 6Bo7 -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Album 4</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../assets/style.css" />
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Pattaya&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Metal+Mania&family=Pattaya&display=swap");
+  </style>
+  <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs((slideIndex += n));
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("indexImg");
+      if (n > x.length) {
+        slideIndex = 1;
+      }
+      if (n < 1) {
+        slideIndex = x.length;
+      }
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      x[slideIndex - 1].style.display = "block";
+    }
+  </script>
+  <body>
+    <div id="container">
+      <div class="w3-content w3-display-container">
+        <header>
+          <img
+            src="./assets/banner.png"
+            alt=""
+            class="indexImg"
+            style="display: block"
+          />
+          <img src="./assets/rick.gif" alt="" class="indexImg" />
+        </header>
+      </div>
+      <nav id="menu_gauche">
+        <ol>
+          <li><a href="album1.html" alt="Album 1">Kill 'Em All</a></li>
+          <li><a href="album2.html" alt="Album 2">Ride The Lightning</a></li>
+          <li><a href="album3.html" alt="Album 3">Master of Puppets</a></li>
+          <li><a href="album4.html" alt="Album 4">…And Justice for All</a></li>
+          <li><a href="album5.html" alt="Album 5">Metallica</a></li>
+          <li><a href="album6.html" alt="Album 6">Load</a></li>
+        </ol>
+      </nav>
+      <article>
+        <h1>…And Justice for All</h1>
+        <figure>
+          <figcaption>…And Justice for All :</figcaption>
+          <audio controls src="../assets/music/And Justice For All.mp3">
+            <code>audio</code> element.
+          </audio>
+        </figure>
+        <p class="bio">
+          …And Justice for All est le quatrième album studio du groupe de thrash
+          metal Metallica sorti le 25 août 1988 par Elektra Records. Le titre de
+          l'album est une allusion aux quatre derniers mots du serment
+          d'allégeance au drapeau des États-Unis. Les chansons de …And Justice
+          For All ont pour thèmes la douleur (Harvester of Sorrow), l'injustice
+          (…And Justice for All), la folie (The Frayed Ends of Sanity) et la
+          mort (To Live Is to Die). Cet album a été composé à la suite du décès
+          de Cliff Burton qui sera remplacé par Jason Newsted, ancien bassiste
+          du groupe Flotsam and Jetsam. Ce sera la troisième meilleure vente (19
+          millions d'exemplaires) après les albums Master of Puppets (23
+          millions d'exemplaires, 1986) et Metallica (25 millions d'exemplaires,
+          1991). L'album marque l'entrée du bassiste Jason Newsted. Ce dernier
+          est d'ailleurs inaudible sur l'album, il est comme "censuré", mais ce
+          défaut sera corrigé sur le Black Album. Un fan bassiste enregistre sa
+          propre version en 2007 et l'appelle …And Justice for Jason. L'album
+          est nommé en 1988 pour le Grammy Award du meilleur album de hard rock,
+          finalement remporté par Crest of a Knave du groupe de rock progressif
+          Jethro Tull. L'album est cité dans l'ouvrage de référence de Robert
+          Dimery « 1001 albums qu'il faut avoir écoutés dans sa vie4 ».
+        </p>
+        <p>
+          <img
+            src="../assets/b8fd19df-9148-4a6f-8e36-5249572e08e8.jpg"
+            alt="cover album"
+            class="imgalbum"
+          />
+        </p>
+      </article>
+      <footer>
+        <p>site réalisé par Jean Staffe mai 2021</p>
+        <p><button class="footerbutton" onclick="plusDivs(1)"></button></p>
+      </footer>
+    </div>
+  </body>
+</html>

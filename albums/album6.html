@@ -1,0 +1,95 @@
+<!-- Nom Prénom -->
+<!-- 6Bo7 -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Album 6</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../assets/style.css" />
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Pattaya&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Metal+Mania&family=Pattaya&display=swap");
+  </style>
+  <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs((slideIndex += n));
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("indexImg");
+      if (n > x.length) {
+        slideIndex = 1;
+      }
+      if (n < 1) {
+        slideIndex = x.length;
+      }
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      x[slideIndex - 1].style.display = "block";
+    }
+  </script>
+  <body>
+    <div id="container">
+      <div class="w3-content w3-display-container">
+        <header>
+          <img
+            src="./assets/banner.png"
+            alt=""
+            class="indexImg"
+            style="display: block"
+          />
+          <img src="./assets/rick.gif" alt="" class="indexImg" />
+        </header>
+      </div>
+      <nav id="menu_gauche">
+        <ol>
+          <li><a href="album1.html" alt="Album 1">Kill 'Em All</a></li>
+          <li><a href="album2.html" alt="Album 2">Ride The Lightning</a></li>
+          <li><a href="album3.html" alt="Album 3">Master of Puppets</a></li>
+          <li><a href="album4.html" alt="Album 4">…And Justice for All</a></li>
+          <li><a href="album5.html" alt="Album 5">Metallica</a></li>
+          <li><a href="album6.html" alt="Album 6">Load</a></li>
+        </ol>
+      </nav>
+      <article>
+        <h1>Load</h1>
+        <figure>
+          <figcaption>King Nothing:</figcaption>
+          <audio controls src="../assets/music/King Nothing.mp3">
+            <code>audio</code> element.
+          </audio>
+        </figure>
+        <p class="bio">
+          Load est le 6e album studio du groupe de heavy metal américain,
+          Metallica. Il est sorti le 4 juin 1996 sur le label Vertigo Records
+          pour l'Europe et Elektra Records pour l' Amérique du Nord et a été
+          produit par Bob Rock, James Hetfield et Lars Ulrich. Cet album était
+          très attendu, après l'énorme succès du Black Album en 1991 et des 5
+          tournées mondiales qui suivirent. Les fans de la première heure furent
+          cependant déçus car Metallica, durant son absence, avait changé
+          d'orientation musicale (l'album fut jugé beaucoup moins "metal" que
+          les précédents). Le changement de look du groupe reçut également un
+          accueil mitigé, notamment leurs cheveux beaucoup plus courts.
+        </p>
+        <p>
+          <img
+            src="../assets/81J-7n9wWrL._SL1425_.jpg"
+            alt="cover album"
+            class="imgalbum"
+          />
+        </p>
+      </article>
+      <footer>
+        <p>site réalisé par Jean Staffe mai 2021</p>
+        <p><button class="footerbutton" onclick="plusDivs(1)"></button></p>
+      </footer>
+    </div>
+  </body>
+</html>

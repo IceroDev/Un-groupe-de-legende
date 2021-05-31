@@ -1,0 +1,110 @@
+<!-- Nom Prénom -->
+<!-- 6Bo7 -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Album 3</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../assets/style.css" />
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Pattaya&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Metal+Mania&family=Pattaya&display=swap");
+  </style>
+  <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs((slideIndex += n));
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("indexImg");
+      if (n > x.length) {
+        slideIndex = 1;
+      }
+      if (n < 1) {
+        slideIndex = x.length;
+      }
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      x[slideIndex - 1].style.display = "block";
+    }
+  </script>
+  <body>
+    <div id="container">
+      <div class="w3-content w3-display-container">
+        <header>
+          <img
+            src="./assets/banner.png"
+            alt=""
+            class="indexImg"
+            style="display: block"
+          />
+          <img src="./assets/rick.gif" alt="" class="indexImg" />
+        </header>
+      </div>
+      <nav id="menu_gauche">
+        <ol>
+          <li><a href="album1.html" alt="Album 1">Kill 'Em All</a></li>
+          <li><a href="album2.html" alt="Album 2">Ride The Lightning</a></li>
+          <li><a href="album3.html" alt="Album 3">Master of Puppets</a></li>
+          <li><a href="album4.html" alt="Album 4">…And Justice for All</a></li>
+          <li><a href="album5.html" alt="Album 5">Metallica</a></li>
+          <li><a href="album6.html" alt="Album 6">Load</a></li>
+        </ol>
+      </nav>
+      <article>
+        <h1>Master of Puppets</h1>
+        <figure>
+          <figcaption>Master of Puppets:</figcaption>
+          <audio
+            controls
+            src="../assets/music/Metallica-Master Of Puppets (Lyrics).mp3"
+          >
+            <code>audio</code> element.
+          </audio>
+        </figure>
+        <p class="bio">
+          Master of Puppets (littéralement Le Marionnettiste), sorti le 3 mars
+          19863, est le troisième album studio du groupe de thrash metal
+          Metallica. C'est le dernier album du groupe avec le bassiste Cliff
+          Burton, ce dernier décède en effet dans un accident de bus en Suède
+          lors de la tournée de promotion de l'album. Master of Puppets est
+          classé 24e place sur le Billboard 200 charts. Il fait partie des 1001
+          albums qu'il faut avoir écoutés dans sa vie4. C'est le premier album
+          de thrash metal à être certifié disque de platine, et le 9 juin 2003,
+          il a été certifié six fois disque de platine par le Recording Industry
+          Association of America (RIAA), et s'est vendu à plus de six millions
+          de copies aux États-Unis3. Master of Puppets a reçu des critiques
+          dithyrambiques par la critique musicale et a été inclus dans les
+          meilleures listes d'albums par certains magazines. Sa puissance, sa
+          virtuosité et ses paroles politiques et colériques ont attiré les
+          éloges de la critique en dehors de la communauté metal. L'album est
+          largement considéré comme le plus gros effort du groupe à l'époque, et
+          devenu l'un des albums de thrash metal les plus influents de tous les
+          temps. Beaucoup de groupes de tous les genres de heavy metal ont
+          repris des chansons de l'album au fil des années, y compris sur les
+          albums-hommage. Au 23 mars 2016, Master of Puppets est le premier
+          enregistrement de heavy metal à entrer dans la Bibliothèque du Congrès
+          du fait de son importance historique5.
+        </p>
+        <p>
+          <img
+            src="../assets/81hryXAVZjL._SX522_.jpg"
+            alt="cover album"
+            class="imgalbum"
+          />
+        </p>
+      </article>
+      <footer>
+        <p>site réalisé par Jean Staffe mai 2021</p>
+        <p><button class="footerbutton" onclick="plusDivs(1)"></button></p>
+      </footer>
+    </div>
+  </body>
+</html>
